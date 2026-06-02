@@ -15,7 +15,6 @@ spec:
             operator: NotIn
             values:
             - us-east-1b
-            - us-east-1d
       preferredDuringSchedulingIgnoredDuringExecution:
         - weight: 10
           preference:
@@ -24,6 +23,11 @@ spec:
                 operator: NotIn
                 values:
                    - amazon
+    tolerations:
+     - key: "project"
+       operator: "Equal"
+       value: "amazon"
+       effect: "NoExecute"  
   containers:
   - name: nginx
     image: nginx
