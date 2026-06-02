@@ -16,7 +16,7 @@ spec:
             values:
             - us-east-1b
             - us-east-1d
-        preferredDuringSchedulingIgnoredDuringExecution:
+      preferredDuringSchedulingIgnoredDuringExecution:
         - weight: 100
           preference:
             matchExpressions:
