@@ -23,10 +23,10 @@ spec:
                 operator: NotIn
                 values:
                    - amazon
-    tolerations:
-     - key: "project"
+  tolerations:
+     - key: "hardware"
        operator: "Equal"
-       value: "amazon"
+       value: "gpu"
        effect: "NoExecute"  
   containers:
   - name: nginx
